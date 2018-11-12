@@ -53,7 +53,6 @@ class DataHelper(object):
             self._train_frames[key], self._validation_frames[key], self._test_frames[key] = splits
 
     def _gen_triples(self, batch_size):
-        import pdb;pdb.set_trace()
         pos_index, neg_index = np.random.choice(len(self._labels), 2, replace=False)
         pos_label, neg_label = self._labels[pos_index], self._labels[neg_index]
         
